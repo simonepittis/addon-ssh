@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:16.0.1
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:16.1.2
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -13,7 +13,7 @@ COPY requirements.txt /tmp/
 
 # Setup base
 ARG BUILD_ARCH=amd64
-ARG HA_CLI_VERSION="4.34.0"
+ARG HA_CLI_VERSION="4.35.0"
 ARG TTYD_VERSION="1.7.7"
 # hadolint ignore=DL3003,DL3042
 RUN \
@@ -21,11 +21,11 @@ RUN \
         bsd-compat-headers=0.7.2-r6 \
         build-base=0.5-r3 \
         cmake=3.29.3-r0 \
-        docker=26.1.3-r1 \
+        docker=26.1.5-r0 \
         json-c-dev=0.17-r0 \
         libffi-dev=3.4.6-r0 \
         libuv-dev=1.48.0-r0 \
-        openssl-dev=3.3.1-r0 \
+        openssl-dev=3.3.1-r3 \
         python3-dev=3.12.3-r1 \
         zlib-dev=1.3.1-r1 \
     \
@@ -38,8 +38,8 @@ RUN \
         bind-tools=9.18.27-r0 \
         bluez=5.76-r0 \
         colordiff=1.0.21-r0 \
-        docker-bash-completion=26.1.3-r1 \
-        docker-zsh-completion=26.1.3-r1 \
+        docker-bash-completion=26.1.5-r0 \
+        docker-zsh-completion=26.1.5-r0 \
         gcompat=1.1.0-r4 \
         git=2.45.2-r0 \
         htop=3.3.0-r0 \
@@ -55,10 +55,9 @@ RUN \
         nano=8.0-r0 \
         ncurses=6.4_p20240420-r0 \
         net-tools=2.10-r3 \
-        networkmanager-cli=1.46.0-r0 \
         nmap=7.95-r0 \
-        openssh=9.7_p1-r3 \
-        openssl=3.3.1-r0 \
+        openssh=9.7_p1-r4 \
+        openssl=3.3.1-r3 \
         procps-ng=4.0.4-r0 \
         pwgen=2.08-r3 \
         pulseaudio-utils=17.0-r0 \
